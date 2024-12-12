@@ -1,3 +1,4 @@
+import sys
 import requests
 from bs4 import BeautifulSoup
 
@@ -22,10 +23,10 @@ def download_url_and_get_all_hrefs(url):
 
 if __name__ == "__main__":
     try:
-        # url = sys.argv[1]
-        # hrefs = download_url_and_get_all_hrefs(url)
+        url = sys.argv[1]
+        hrefs = download_url_and_get_all_hrefs(url)
         
-        hrefs = download_url_and_get_all_hrefs('https://www.jcu.cz')
+        # hrefs = download_url_and_get_all_hrefs('https://www.jcu.cz')
         print(hrefs)
     except Exception as e:
         print(f"Error na konci: {e}")
